@@ -1,7 +1,7 @@
 """
-The following script will allow you identify your policy id
-supply the necessary value below to allow the script to
-connect to your Firewall and print a list of all your policies
+The following script will allow you to identify your policy id.
+Supply the necessary values below to allow the script to
+connect to your Firewalla and print a list of all your policies
 
 A json blob like the following will print out.
 
