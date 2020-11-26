@@ -1,0 +1,8 @@
+{
+    "domain": "firewalla",
+    "name": "Firewalla integration",
+    "documentation": "https://github.com/my-given-name-is-jeremy/firewalla",
+    "dependencies": [],
+    "codeowners": ["@my-given-name-is-jeremy"],
+    "requirements": ["sshtunnel", "aiohttp"]
+  }
