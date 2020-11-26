@@ -19,7 +19,7 @@ _LOGGER = logging.getLogger(__name__)
 # Validation of the user's configuration
 
 CONF_POLICY = "policy"
-CONF_PUBKEY = "pubkey"
+CONF_KEYFILE = "keyfile"
 CONF_INVERT = "invert"
 
 PLATFORM_SCHEMA = PLATFORM_SCHEMA.extend({
@@ -27,8 +27,8 @@ PLATFORM_SCHEMA = PLATFORM_SCHEMA.extend({
     vol.Required(CONF_NAME): cv.string,
     vol.Required(CONF_POLICY): cv.string,
     vol.Required(
-        CONF_PUBKEY,
-        default="/config/id_rsa"
+        CONF_KEYFILE,
+        default="/config/firewalla"
     ):cv.string,
     vol.Optional(CONF_INVERT, default=False): cv.boolean
 })
@@ -41,7 +41,7 @@ async def async_setup_platform(hass, config, async_add_entities, discovery_info=
     async_add_entities([FirewallaPolicy(
         config[CONF_HOST],
         config[CONF_PUBKEY],
-        config[CONF_POLICY],
+        config[CONF_KEYFILE],
         config[CONF_NAME],
         config[CONF_INVERT]
     )])
