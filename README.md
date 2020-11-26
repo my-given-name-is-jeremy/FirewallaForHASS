@@ -11,6 +11,17 @@ to the security implications. Do your research and choose to proceed wisely. The
 to the localhost bound unencrypted and unauthenticated api. The integration them performs GET and POST operations against the api to perform the 
 requested actions.
 
+Proper operations against the local api can only be performed once the api has been enabled. Place the following script in the 
+`~/.firewalla/config/post_main.d/` directory as `app-local.sh`. 
+
+[app-local.sh](https://gist.github.com/my-given-name-is-jeremy/eecb70f2bee1f36621b54bdeb87a23d9)
+
+Use the following command to enable execution of the file.
+
+```
+# chmod +x app-local.sh
+```
+
 ## Installation
 Download the latest from the repository and place the `firewalla` directory in the custom_components directory of your Home Assistant installation.
 Generate a rsa keypair on your Home Assistant server so you don't have to copy/paste the private key.
